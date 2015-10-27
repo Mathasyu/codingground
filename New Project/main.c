@@ -1,4 +1,4 @@
-#include <stdio.h> // Standard-Include
+#include <stdio.h> // Standard-Includesefefef
 #include <string.h> // Include der String-Funktionen
 
 // Aufgabenblatt prakt01.pdf
