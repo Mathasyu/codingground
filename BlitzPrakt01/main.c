@@ -51,13 +51,16 @@ int schaltjahr()
       (jahr % 4 == 0 && jahr % 100 == 0 && jahr % 400 == 0)
       )
     {
-        strcpy( ausgabe, "Es handelt sich um ein Schaltjahr" );
+        strcpy( ausgabe, "Es handelt sich um ein Schaltjahr" ); // Kopieren des Stringes "Es handelt sich..." in die Variable ausgabe
     }
     // SONST
     else {
-         strcpy( ausgabe, "Es handelt sich NICHT um ein Schaltjahr" );
-    // ENde der Bedingung
+         strcpy( ausgabe, "Es handelt sich NICHT um ein Schaltjahr" );  // da wir die Funktion strcpy (StringCopy) nutzen, müssen wir die
+                                                                        // Stringfunktionen inkludieren #include <string.h>
+
     }
+    // Ende FALLS
+
     // Ausgabe der Variable ausgabe
  printf("\n%s\n", ausgabe);
  return 0;
