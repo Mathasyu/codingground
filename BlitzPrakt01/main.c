@@ -59,6 +59,7 @@ int jahresliste()
  int n=0; // Daten: Jahr Beginn als GanzZahl n (int)
  int m=0; // Daten: jahr  ENDE als GanzZahl m (int)
  int i;
+ int jahr=0;
  char ausgabe[100] = ""; // Daten: ausgabe als String (char)
   
  printf("Dieses Programm gibt aus, ob die die Jahre zwischen Anfangs- und Endjahr ein Schaltjahr ist:\n\n");
@@ -69,8 +70,8 @@ int jahresliste()
  scanf("%d", &n);
  printf("Nun gib das Endjahr ein:");
  scanf("%d", &m);
- printf("Jahr  |  Schaltjahr ?");
- printf("---------------------");
+ printf("\nJahr  |  Schaltjahr ?\n");
+ printf("---------------------\n");
  for(i=n; i<=m;i++) {
       jahr = i;
      // die FALLS SONST Kontrollstruktur (Bedingung)
@@ -80,18 +81,18 @@ int jahresliste()
           (jahr % 4 == 0 && jahr % 100 == 0 && jahr % 400 == 0)
           )
         {
-            strcpy( ausgabe, "%i  |  Ja", jahr ); // Kopieren des Stringes "Es handelt sich..." in die Variable ausgabe
+            strcpy( ausgabe, "  |  Ja" ); // Kopieren des Stringes "Es handelt sich..." in die Variable ausgabe
         }
         // SONST
         else {
-             strcpy( ausgabe, "%i  |  Nein", jahr );  // da wir die Funktion strcpy (StringCopy) nutzen, müssen wir die
+             strcpy( ausgabe, "  |  Nein" );  // da wir die Funktion strcpy (StringCopy) nutzen, müssen wir die
                                                                             // Stringfunktionen inkludieren #include <string.h>
 
         }
         // Ende FALLS
 
         // Ausgabe der Variable ausgabe
-     printf("\n%s\n", ausgabe);
+     printf("%i %s\n", jahr, ausgabe);
     }
  return 0;
 } // end jahresliste
@@ -102,4 +103,3 @@ int main()
     jahresliste();
  return 0;
 }//end HAUPTPROGRAMM
-
